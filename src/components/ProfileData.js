@@ -14,7 +14,7 @@ function ProfileData() {
   const [isLoading, setIsLoading] = useState(false);
 
   function profileData() {
-    fetch(`http://localhost:5000/api/${id}`)
+    fetch(`${process.env.REACT_APP_IP}/api/${id}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -29,7 +29,8 @@ function ProfileData() {
       });
   }
   function repoData() {
-    fetch(`http://localhost:5000/api/repos/${id}`)
+    console.log(process.env.REACT_APP_IP);
+    fetch(`${process.env.REACT_APP_IP}/api/repos/${id}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

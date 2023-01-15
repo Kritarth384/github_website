@@ -13,9 +13,9 @@ export default function Repo({ data, name }) {
   useEffect(() => {
     setRepoData(data);
     const promises = data.map((repo) =>
-      fetch(`http://localhost:5000/api/lang/${name}/${repo.repo_name}`).then(
-        (response) => response.json()
-      )
+      fetch(
+        `${process.env.REACT_APP_IP}/api/lang/${name}/${repo.repo_name}`
+      ).then((response) => response.json())
     );
     Promise.all(promises)
       .then((results) => {

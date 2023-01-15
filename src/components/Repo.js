@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Error from "./error";
 import Loading from "./Loading";
 
 export default function Repo({ data, name }) {
@@ -6,9 +7,9 @@ export default function Repo({ data, name }) {
   const [langData, setLangData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [index, setIndex] = useState(0);
+  const [error, setError] = useState(null);
   const hasNext = index + 10 < langData.length;
   const hasPrev = index > 0;
-  
 
   useEffect(() => {
     setRepoData(data);
@@ -22,10 +23,11 @@ export default function Repo({ data, name }) {
         setLangData(results);
         setLoading(false);
       })
-      .catch((error) => 
+      .catch((error) => {
+        setError(error);
+        setLoading(false);
+      });
   }, []);
-
-  
 
   if (loading) {
     return (
@@ -33,6 +35,10 @@ export default function Repo({ data, name }) {
         <Loading />
       </div>
     );
+  }
+
+  if (error) {
+    return <Error />;
   }
 
   return (
@@ -47,7 +53,6 @@ export default function Repo({ data, name }) {
       </button>
 
       {repoData.map((repo, ind) => {
-        
         if (ind >= index && ind < index + 10) {
           return (
             <a href={repo.url} target="_blank" rel="noreferrer" key={repo.id}>

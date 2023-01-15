@@ -22,7 +22,17 @@ npm i
 <br>
 
 
-``Step 2``  &nbsp; Run the app in development mode
+``Step 2``  &nbsp; Create ``.env.local`` file where you have to add IP address of the backend API. Write below code in your .env.local file
+
+```
+REACT_APP_IP='https://important-overshirt-slug.cyclic.app'
+```
+
+
+<br>
+
+
+``Step 3``  &nbsp; Run the app in development mode
 
 ```
 npm run start

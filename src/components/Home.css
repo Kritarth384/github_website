@@ -1,0 +1,11 @@
+.Home{
+    height: 60vh;
+    background-color: black;
+    /* background-size: cover;
+    background-position: top;
+    position: relative; */
+
+ 
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 100%);
+}

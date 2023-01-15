@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Run on Local Machine
 
-Install / Download all the files on your local machine
+Install or Download all the files on your local machine
 
 ``Step 1``  &nbsp; Install all the npm packages
 

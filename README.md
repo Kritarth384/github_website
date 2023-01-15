@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is for displaying github dashboard - Profiles and Repo information of particular username. You can try on your own using Below Link !!!
+
+[![Deployed on Vercel](https://deploy.cyclic.app/button.svg)](https://github-website.vercel.app/)
 
 ## Run on Local Machine
 

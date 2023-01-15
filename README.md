@@ -2,7 +2,7 @@
 
 This project is for displaying github dashboard - Profiles and Repo information of particular username. You can try on your own using Below Link !!!
 
-[![Deployed on Vercel](https://deploy.cyclic.app/button.svg)](https://github-website.vercel.app/)
+### [Deployed on Vercel](https://github-website.vercel.app/)
 
 ## Run on Local Machine
 

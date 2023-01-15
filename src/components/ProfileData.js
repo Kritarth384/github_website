@@ -4,7 +4,6 @@ import Error from "./error";
 import Loading from "./Loading";
 import Profile from "./Profile";
 import Repo from "./Repo";
-import {}
 
 function ProfileData() {
   const { id } = useParams();

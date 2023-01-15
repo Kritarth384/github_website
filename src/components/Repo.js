@@ -8,7 +8,7 @@ export default function Repo({ data, name }) {
   const [index, setIndex] = useState(0);
   const hasNext = index + 10 < langData.length;
   const hasPrev = index > 0;
-  console.log(hasNext, hasPrev);
+  
 
   useEffect(() => {
     setRepoData(data);
@@ -22,10 +22,10 @@ export default function Repo({ data, name }) {
         setLangData(results);
         setLoading(false);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => 
   }, []);
 
-  console.log(langData);
+  
 
   if (loading) {
     return (
@@ -47,7 +47,7 @@ export default function Repo({ data, name }) {
       </button>
 
       {repoData.map((repo, ind) => {
-        console.log(ind);
+        
         if (ind >= index && ind < index + 10) {
           return (
             <a href={repo.url} target="_blank" rel="noreferrer" key={repo.id}>

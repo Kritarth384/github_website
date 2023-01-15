@@ -17,7 +17,6 @@ function ProfileData() {
     fetch(`${process.env.REACT_APP_IP}/api/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setData(data.userData);
         if (data.message) {
           setError(data.message);
@@ -29,11 +28,9 @@ function ProfileData() {
       });
   }
   function repoData() {
-    console.log(process.env.REACT_APP_IP);
     fetch(`${process.env.REACT_APP_IP}/api/repos/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setRepo(data.repoData);
         setIsLoading(false);
         if (data.message) {
@@ -57,8 +54,6 @@ function ProfileData() {
       setIsLoading(false);
     };
   }, []);
-
-  console.log({ langData });
 
   if (error) {
     return <Error />;
